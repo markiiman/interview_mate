@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InterviewMate
 
-## Getting Started
+## Overview
+InterviewMate is an AI-powered project designed to help users prepare for technical interviews. It offers a comprehensive suite of tools and resources, including mock interviews, and personalized feedback, to help users improve their technical skills and boost their confidence.
 
-First, run the development server:
+## Technologies Used
+- **Next.js**: A React framework for server-side rendering and generating static websites.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Firebase**: A platform developed by Google for creating mobile and web applications.
+- **VAPI**: A hypothetical API service used for various integrations.
+- **DevIcons**: A set of icons for programming languages, designing & development tools.
 
+## Setup
+
+### Install Dependencies
+Run the following command to install the necessary npm packages:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### ESLint and Prettier Configuration
+This project uses ESLint and Prettier to enforce code quality and formatting standards.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### ESLint Configuration
+The ESLint configuration is located in `.eslintrc.js`:
+```javascript
+module.exports = {
+  extends: ['plugin:prettier/recommended'],
+  plugins: ['prettier', 'import'],
+  rules: {
+    'prettier/prettier': 'error',
+    'import/no-unresolved': 'error',
+    'import/named': 'error',
+    'import/default': 'error',
+    'import/namespace': 'error',
+    'import/no-unused-modules': 'warn',
+    'import/no-duplicates': 'warn',
+  },
+};
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Prettier Configuration
+The Prettier configuration is located in `.prettierrc`:
+```json
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "printWidth": 80
+}
+```
 
-## Learn More
+### VSCode Settings
+To ensure ESLint and Prettier run on save, update your VSCode settings in `.vscode/settings.json`:
+```jsonc
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
+To lint and format your code, simply save your files in VSCode. ESLint and Prettier will automatically run and fix any issues.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
+Feel free to open issues or submit pull requests if you have any suggestions or improvements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgements
+Special thanks to the YouTube channel [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) for the inspiration and guidance in creating this project.
