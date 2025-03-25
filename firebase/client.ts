@@ -3,7 +3,7 @@ import { getApp, getApps, initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDZKcJ6X5rE3493XYdrlFDRxzhn9MtagZ4',
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: 'interviewmate-c93c4.firebaseapp.com',
   projectId: 'interviewmate-c93c4',
   storageBucket: 'interviewmate-c93c4.firebasestorage.app',
