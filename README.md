@@ -70,14 +70,11 @@ To ensure ESLint and Prettier run on save, update your VSCode settings in `.vsco
 }
 ```
 
+## Live Site
+The live demo site can be found [here](https://interview-mate-vl8u.vercel.app/)
+
 ## Usage
 To lint and format your code, simply save your files in VSCode. ESLint and Prettier will automatically run and fix any issues.
-
-## Contributing
-Feel free to open issues or submit pull requests if you have any suggestions or improvements.
-
-## License
-This project is licensed under the MIT License.
 
 ## Acknowledgements
 Special thanks to the YouTube channel [JavaScript Mastery](https://www.youtube.com/@javascriptmastery) for the inspiration and guidance in creating this project.
